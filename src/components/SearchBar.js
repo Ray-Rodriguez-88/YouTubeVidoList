@@ -10,10 +10,11 @@ class SearchBar extends React.Component{
 
   onFormSubmit = event => {
     event.preventDefault();
-
+    
+    this.props.onTermSubmit(this.state.term)
   };
   // event does not need to be in parenthesis React knows. 
-  
+
   render() {
     return (
       <div className="search-bar ui segment">
